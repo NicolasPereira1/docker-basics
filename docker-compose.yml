@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  my-backend:
+    build: ./node-app
+    volumes:
+      - ./node-app:/app
+    ports:
+      - 8080:80
+      
+  my-frontend:
+    build: ./react-app
+    volumes:
+      - ./react-app:/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - my-backend
