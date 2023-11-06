@@ -15,6 +15,14 @@ And lastly run it with :
     docker run -dp 127.0.0.1:4000:80 node-docker
 ```
 
+summary :
+```
+    docker build . -t backend
+    docker run -d -p 8080:80 backend
+    docker build . -t frontend
+    docker run -dp 3000:3000 frontend
+```
+
 ## Docker-compose method
 
 This method is based on the docker-compose.yml.
