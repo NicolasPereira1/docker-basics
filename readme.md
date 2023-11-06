@@ -39,3 +39,10 @@ If you add the option -a you will be able to see the history of the container ra
 ## Debugging
 
 I used ``` docker exec -it docker-basics-my-frontend-1 sh ``` in order to debug the Hostname resolution.
+
+## Useful commands
+docker-compose down
+docker rm -f $(docker ps -a -q)
+docker volume rm $(docker volume ls -q)
+docker system prune -a *clean up the system*
+docker start -a CONTAINER_NAME *the -a will give a feedback in case of fail*
